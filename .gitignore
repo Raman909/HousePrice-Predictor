@@ -1,0 +1,12 @@
+# Node.js / React
+frontend/node_modules/
+frontend/build/
+
+# Python / Backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/predictions_log.csv
+
+# OS files
+.DS_Store
