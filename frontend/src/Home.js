@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 
 const Home = () => {
+  const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5000";
   const [formData, setFormData] = useState({
     MedInc: '',
     HouseAge: '',
@@ -53,7 +54,7 @@ const Home = () => {
     setPrediction(null);
 
     try {
-      const response = await fetch('https://houseprice-predictor-p3rk.onrender.com', {
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
